@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Group"
+        android:title="@string/action_crateGroup"
+        android:icon="@drawable/ic_search_white_48dp"
+        app:showAsAction="ifRoom"
+        ></item>
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_message_white_48dp"
+        app:showAsAction="ifRoom"
+        ></item>
+
+    <item android:id="@+id/action_NewGroup"
+        android:title="@string/action_newGroup"
+        ></item>
+    <item android:id="@+id/action_NewBroadcast"
+        android:title="@string/action_sewBroadcast"
+        ></item>
+    <item android:id="@+id/action_web"
+        android:title="@string/action_web"
+        ></item>
+
+    <item android:id="@+id/action_StarredMsg"
+        android:title="@string/action_starredMsg"
+        ></item>
+    <item android:id="@+id/action_Status"
+        android:title="@string/action_status"
+        ></item>
+
+</menu>

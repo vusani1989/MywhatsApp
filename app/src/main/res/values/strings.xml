@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WhatsApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_crateGroup">Group</string>
+    <string name="action_search">search</string>
+    <string name="action_newGroup">NewGroup</string>
+    <string name="action_sewBroadcast">New bradcast</string>
+    <string name="action_web">Whatsapp Web</string>
+    <string name="action_starredMsg">Sterred message</string>
+    <string name="action_status">Status</string>
+    <string name="title_activity_activity_status">Status</string>
+    <string name="title_activity_activity_satus">ActivitySatus</string>
+
+
+
+
+
+</resources>
