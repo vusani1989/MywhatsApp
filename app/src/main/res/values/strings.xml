@@ -11,9 +11,7 @@
     <string name="action_status">Status</string>
     <string name="title_activity_activity_status">Status</string>
     <string name="title_activity_activity_satus">ActivitySatus</string>
-
-
-
+    <string name="StatusImage">ImagegeStatus</string>
 
 
 </resources>

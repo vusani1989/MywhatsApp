@@ -34,7 +34,7 @@ public class SubjectAdapter extends ArrayAdapter<SchoolSuject>{
 
         }
         TextView subJectText = (TextView)convertView.findViewById(R.id.memberName);
-        ImageView image = (ImageView) convertView.findViewById(R.id.imageItems);
+        ImageView image = (ImageView) convertView.findViewById(R.id.imageViewStatus);
 
         subJectText.setText(suject.name);
         image.setImageResource(suject.imagedId);
