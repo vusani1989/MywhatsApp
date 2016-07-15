@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/View_contact"
+        android:title="@string/View_contact"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/Media"
+        android:title="@string/Media"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        ></item>
+
+    <item android:id="@+id/Search"
+        android:title="@string/Search"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        ></item>
+
+    <item android:id="@+id/Mute"
+        android:title="@string/Mute"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        ></item>
+    <item android:id="@+id/Wallpaper"
+        android:title="@string/Wallpaper"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        ></item>
+
+    <item android:id="@+id/More"
+        android:title="@string/more"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        ></item>
+
+</menu>

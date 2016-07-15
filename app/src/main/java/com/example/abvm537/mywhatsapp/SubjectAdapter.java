@@ -31,13 +31,16 @@ public class SubjectAdapter extends ArrayAdapter<SchoolSuject>{
 
         if(convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.layoutchart,parent,false);
-
         }
+
         TextView subJectText = (TextView)convertView.findViewById(R.id.memberName);
         ImageView image = (ImageView) convertView.findViewById(R.id.imageViewStatus);
 
         subJectText.setText(suject.name);
         image.setImageResource(suject.imagedId);
+
+        //subJectTextcall.setText(suject.statusCall);
+       // imageCall.setImageResource(suject.imagedIdCall);
         return convertView;
 
 

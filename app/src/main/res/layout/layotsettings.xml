@@ -7,29 +7,30 @@
     <TextView
         android:layout_width="250dp"
         android:layout_height="30dp"
-        android:id="@+id/memberName"
+        android:id="@+id/settingsName"
         android:layout_marginLeft="80dp"
         android:textColor="#272727"
         android:textSize="15dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
 
     <TextView
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="10:09"
-        android:id="@+id/textViewTime"
+        android:text="God help me"
+        android:id="@+id/textViewSetingstatus"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-30dp"
+        android:layout_marginLeft="12dp"
         android:textColor="#787878"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:layout_marginTop="20dp" />
 
     <ImageView
         android:layout_width="60dp"
         android:layout_height="70dp"
-        android:id="@+id/imageViewStatus"
+        android:id="@+id/imageViewSettings"
         android:layout_marginRight="130dp"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-80dp"
         android:contentDescription="@string/StatusImage" />
 </LinearLayout>

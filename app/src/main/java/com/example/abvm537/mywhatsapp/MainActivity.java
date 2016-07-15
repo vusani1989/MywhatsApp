@@ -1,5 +1,6 @@
 package com.example.abvm537.mywhatsapp;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -7,15 +8,19 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,16 +37,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        BitmapFactory.Options options = new BitmapFactory.Options();
-//        options.inJustDecodeBounds = true;
-//        BitmapFactory.decodeResource(getResources(), R.id.imageViewStatus, options);
-//        int imageHeight = options.outHeight;
-//        int imageWidth = options.outWidth;
-//        String imageType = options.outMimeType;
-
-
         //list view
-        ListView listView = (ListView) findViewById(R.id.listViewChart);
+        ListView listViewCharts = (ListView) findViewById(R.id.listViewChart);
         ArrayList<SchoolSuject>sujects = new ArrayList<SchoolSuject>();
 
         SchoolSuject Vusi = new SchoolSuject("Vusi", R.drawable.ic_message_white_48dp);
@@ -69,8 +66,100 @@ public class MainActivity extends AppCompatActivity {
         sujects.add(lee);
 
         SubjectAdapter adapter = new SubjectAdapter(getApplicationContext(),R.layout.layoutchart, sujects);
-        listView.setAdapter(adapter);
 
+        listViewCharts.setAdapter(adapter);
+        //SETTTING ITEM LISTENER ON A LIST VIEW
+        listViewCharts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), parent.getItemIdAtPosition(position) + "is selectet", Toast.LENGTH_LONG)
+                        .show();
+                Intent intent = new Intent(MainActivity.this, ActivityChart.class);
+                startActivity(intent);
+            }
+        });
+        //list view 2 is displaying the calls maid
+        ListView listViewCallInfor = (ListView)findViewById(R.id.listViewCalls);
+        ArrayList<classCalls>callses = new ArrayList<classCalls>();
+
+        classCalls Vusani = new classCalls("Vusi", R.drawable.ic_message_white_48dp);
+        callses.add(Vusani);
+
+        classCalls bednogcALL = new classCalls("bednog", R.drawable.ic_message_white_48dp);
+        callses.add(bednogcALL);
+
+        classCalls tashCALL = new classCalls("fine", R.drawable.ic_message_white_48dp);
+        callses.add(tashCALL);
+
+        classCalls tauCall = new classCalls("tau", R.drawable.ic_message_white_48dp);
+        callses.add(tauCall);
+
+        classCalls mudiseCall = new classCalls("mudise", R.drawable.ic_message_white_48dp);
+        callses.add(mudiseCall);
+
+        classCalls dhCall = new classCalls("dh", R.drawable.ic_message_white_48dp);
+        callses.add(dhCall);
+
+        classCalls colinsCall = new classCalls("colins", R.drawable.ic_message_white_48dp);
+        callses.add(colinsCall);
+
+        classCalls leeCall = new classCalls("lean", R.drawable.ic_message_white_48dp);
+        callses.add(leeCall);
+
+        callsAdapter adapter2 = new callsAdapter(getApplicationContext(),R.layout.layoutcalls,callses);
+
+        listViewCallInfor.setAdapter(adapter2);
+        listViewCallInfor.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), parent.getItemIdAtPosition(position) + "is selectet", Toast.LENGTH_LONG)
+                        .show();
+                Intent intent = new Intent(MainActivity.this, ActivityCalls.class);
+                startActivity(intent);
+            }
+        });
+
+
+        //list to display contacts
+        ListView listViewContacts = (ListView) findViewById(R.id.listViewContact);
+        ArrayList<classContact> contacts = new ArrayList<classContact>();
+
+        classContact VusaniContact = new classContact("Vusi", R.drawable.ic_message_white_48dp);
+        contacts.add(VusaniContact);
+
+        classContact bednogContact = new classContact("bednog", R.drawable.ic_message_white_48dp);
+        contacts.add(bednogContact);
+
+        classContact tashContact = new classContact("fine", R.drawable.ic_message_white_48dp);
+        contacts.add(tashContact);
+
+        classContact tauContact = new classContact("tau", R.drawable.ic_message_white_48dp);
+        contacts.add(tauContact);
+
+        classContact mudiseContact = new classContact("mudise", R.drawable.ic_message_white_48dp);
+        contacts.add(mudiseContact);
+
+        classContact dhContact = new classContact("dh", R.drawable.ic_message_white_48dp);
+        contacts.add(dhContact);
+
+        classContact colinsContact = new classContact("colins", R.drawable.ic_message_white_48dp);
+        contacts.add(colinsContact);
+
+        classContact leeContact = new classContact("lean", R.drawable.ic_message_white_48dp);
+        contacts.add(leeContact);
+        contactAdapter adapter3 =new contactAdapter(getApplicationContext(),R.layout.layoutcontact,contacts);
+        listViewContacts.setAdapter(adapter3);
+//setting item click lestener
+        listViewContacts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), parent.getItemIdAtPosition(position) + "is selectet", Toast.LENGTH_LONG)
+                        .show();
+                Intent intent = new Intent(MainActivity.this, ActivityChart.class);
+                startActivity(intent);
+            }
+        });
+        //MY TABS
         TabHost tabHost = (TabHost)findViewById(R.id.tabHost);
         tabHost.setup();
 
@@ -78,8 +167,8 @@ public class MainActivity extends AppCompatActivity {
         tabSpec.setContent(R.id.CALLS);
         tabSpec.setIndicator("CALLS");
         //tabHost.addTab(tabSpec);
-
         tabHost.addTab(tabSpec);
+
         tabSpec = tabHost.newTabSpec("CHATS");//assignig tab buttons
         tabSpec.setContent(R.id.CHATS);
         tabSpec.setIndicator("CHATS");
@@ -103,40 +192,6 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-//    public void loadImage() {
-//        if(readBitmapInfor() > Memory.megabytesFree()) {
-//            subSampleImage(32);
-//        }else {
-//            image.setImageResource(R.drawable.chrysanthemum);
-//        }
-//    }
-//
-//    private void subSampleImage(int powerOf2) {
-//        if(powerOf2 < 1 || powerOf2 > 32 ){
-//            Log.e("Scalebefore","apply upscale of " + powerOf2);
-//            return;
-//        }
-//        final Resources res = this.getResources();
-//        final BitmapFactory.Options options = new  BitmapFactory.Options();
-//        options.inJustDecodeBounds = false;
-//        options.inSampleSi private float readBitmapInfor() {
-//        final Resources res = this.getResources();
-//        final BitmapFactory.Options options = new BitmapFactory.Options();
-//        options.inJustDecodeBounds = true;
-//        BitmapFactory.decodeResource(res, R.drawable.chrysanthemum, options);
-//        final float imageHeigt = options.outHeight;
-//        final float imageWidth = options.outWidth;
-//        final String imageMimeType = options.outMimeType;
-//
-//        Log.d("scaleBeforeLoad","w, h, type:" + imageWidth + "," + imageHeigt + ", " + imageMimeType);
-//        Log.d("scaleBeforeLoad","estimated" + imageWidth * imageHeigt * BYTES_PER_PX / Memory.BYTES_IN_MB );
-//        return  imageWidth * imageHeigt * BYTES_PER_PX / Memory.BYTES_IN_MB;
-//    }ze = powerOf2;
-//        final Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.chrysanthemum, options);
-//        image.setImageBitmap(bmp);
-//    }
-
-//
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -154,7 +209,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intentSetting = new Intent(MainActivity.this, ActivitySettings.class);
+            startActivity(intentSetting);
+            return super.onOptionsItemSelected(item);
         }
         if(id == R.id.action_Status){
             Intent intent = new Intent(MainActivity.this, ActivitySatus.class);
@@ -164,50 +221,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public static int calculateInSampleSize(
-//            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-//        // Raw height and width of image
-//        final int height = options.outHeight;
-//        final int width = options.outWidth;
-//        int inSampleSize = 1;
-//
-//        if (height > reqHeight || width > reqWidth) {
-//
-//            final int halfHeight = height / 2;
-//            final int halfWidth = width / 2;
-//
-//            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-//            // height and width larger than the requested height and width.
-//            while ((halfHeight / inSampleSize) > reqHeight
-//                    && (halfWidth / inSampleSize) > reqWidth) {
-//                inSampleSize *= 2;
-//            }
-//        }
-//
-//        return inSampleSize;
-//    }
-//
-//    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-//                                                         int reqWidth, int reqHeight) {
-//
-//        // First decode with inJustDecodeBounds=true to check dimensions
-//        final BitmapFactory.Options options = new BitmapFactory.Options();
-//        options.inJustDecodeBounds = true;
-//        BitmapFactory.decodeResource(res, resId, options);
-//
-//        // Calculate inSampleSize
-//        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-//
-//        // Decode bitmap with inSampleSize set
-//        options.inJustDecodeBounds = false;
-//        return BitmapFactory.decodeResource(res, resId, options);
-//    }
 
-
-//    @Override
-//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        String member_name = rowItems.get(position).getMember_name();
-//        Toast.makeText(getApplicationContext(),""+ member_name,
-//                Toast.LENGTH_LONG).show();
-//    }
 }

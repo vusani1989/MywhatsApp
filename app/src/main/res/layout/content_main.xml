@@ -37,7 +37,13 @@
                     android:id="@+id/CALLS"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listViewCalls" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/CHATS"
@@ -58,6 +64,10 @@
                     android:orientation="vertical"
                     android:textColor="#FFFFFF">
 
+                    <ListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listViewContact" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

@@ -28,6 +28,21 @@
             android:label="@string/title_activity_activity_satus"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".ActivityChart"
+            android:label="@string/title_activity_activity_chart"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".ActivitySettings"
+            android:label="@string/title_activity_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".ActivityCalls"
+            android:label="@string/title_activity_activity_calls"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

@@ -10,16 +10,11 @@ import java.util.ArrayList;
 public class SchoolSuject {
     public String name;
     public int imagedId;
-    public String status;
-    public String contact_type;
+
 
     public SchoolSuject(String name, int imagedId) {
         this.name = name;
         this.imagedId = imagedId;
-        //this.contact_type = contact_type;
-        //this.status = status;
+
     }
-
-
-
 }
