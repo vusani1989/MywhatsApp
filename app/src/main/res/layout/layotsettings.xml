@@ -21,14 +21,14 @@
         android:text="God help me"
         android:id="@+id/textViewSetingstatus"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="12dp"
+        android:layout_marginLeft="20dp"
         android:textColor="#787878"
         android:textSize="15dp"
         android:layout_marginTop="20dp" />
 
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="70dp"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
         android:id="@+id/imageViewSettings"
         android:layout_marginRight="130dp"
         android:layout_marginTop="-80dp"

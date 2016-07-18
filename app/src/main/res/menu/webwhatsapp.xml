@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ActivityWhatsAppWeb">
+
+    <item android:id="@+id/title_activity_activity_whats_app_web"
+        android:title="@string/title_activity_activity_whats_app_web"
+        android:icon="@drawable/ic_add_white_48dp"
+        app:showAsAction="ifRoom"
+        ></item>
+</menu>

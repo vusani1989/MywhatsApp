@@ -217,6 +217,15 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ActivitySatus.class);
             startActivity(intent);
         }
+        if (id == R.id.action_StarredMsg){
+            Intent intent = new Intent(MainActivity.this, starredMsgActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.action_web){
+            Intent intent = new Intent(MainActivity.this, ActivityWhatsAppWeb.class);
+            startActivity(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

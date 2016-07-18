@@ -4,14 +4,14 @@
     <string name="action_settings">Settings</string>
     <string name="action_crateGroup">Group</string>
     <string name="action_search">search</string>
-    <string name="action_newGroup">NewGroup</string>
-    <string name="action_sewBroadcast">New bradcast</string>
-    <string name="action_web">Whatsapp Web</string>
-    <string name="action_starredMsg">Sterred message</string>
+    <string name="action_newGroup">New group</string>
+    <string name="action_sewBroadcast">New broadcast</string>
+    <string name="action_web">WhatsApp Web</string>
+    <string name="action_starredMsg">Starred message</string>
     <string name="action_status">Status</string>
     <string name="title_activity_activity_status">Status</string>
     <string name="title_activity_activity_satus">Status</string>
-    <string name="StatusImage">ImagegeStatus</string>
+    <string name="StatusImage">Image Status</string>
     <string name="title_activity_activity_chart">ActivityChart</string>
     <string name="View_contact">View contact</string>
     <string name="Media">Media</string>
@@ -21,10 +21,14 @@
     <string name="more">More</string>
     <string name="title_activity_activity_calls">Call info</string>
     <string name="Delete_All">Delete all</string>
-    <string name="title_activity_activity_settings">ActivitySettings</string>
+    <string name="title_activity_activity_settings">Settings</string>
     <string name="remove_call">Remove from call log</string>
     <string name="Block">Block</string>
     <string name="return_chart"></string>
+    <string name="title_activity_starred">starredActivity</string>
+    <string name="title_activity_starred_msg">Starred messages</string>
+    <string name="title_activity_activity_whats_app_web">ActivityWhatsAppWeb</string>
+    
 
 
 
